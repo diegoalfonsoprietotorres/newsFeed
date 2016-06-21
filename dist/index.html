@@ -1,0 +1,17 @@
+<!doctype html><html class="no-js" lang=""><head><meta charset="utf-8"><meta name="description" content=""><meta name="viewport" content="width=device-width,initial-scale=1"><title>newsFeed</title><link rel="apple-touch-icon" href="apple-touch-icon.png"><!-- Place favicon.ico in the root directory --><link rel="stylesheet" href="styles/main.css"><script src="scripts/vendor/modernizr.js"></script></head><body data-ng-app="newsFeedApp"><!--[if lt IE 10]>
+<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade
+  your browser</a> to improve your experience.</p>
+<![endif]--><div class="container animated bounceInUp" data-ng-controller="NewsController as vm"><div class="header"><ul class="nav nav-pills pull-right"><li><h4 id="header-new-title">{{vm.newSelected.title}}</h4></li></ul><a href="" ng-click="vm.reload()"><img src="images/menu-button-of-three-horizontal-lines.svg" alt=""></a></div><div class="news-container" ng-if="vm.ready"><div data-ng-repeat="new in vm.news track by $index"><div class="row new-summary animated bounceInLeft" ng-click="vm.selectNew(new)"><div class="col-xs-3 col-md-2"><img data-ng-src="{{new.image}}" alt=""></div><div class="col-xs-9 col-md-10"><h4>{{new.title}}</h4></div></div><div class="row row-eq-height new animated bounceInDown" ng-if="vm.isNewSelected && vm.newSelected.id === new.id"><div class="col-xs-5 col-md-5 new-img"><img data-ng-src="{{new.image}}" alt=""></div><div class="col-xs-7 col-md-7 new-content"><h4>{{new.title}}</h4><h5>{{new.content}}</h5></div></div></div></div><div class="footer"><p>♥ by the Rappi team</p></div></div><!-- Google Analytics: change UA-XXXXX-X to be your site's ID. --><script>(function (b, o, i, l, e, r) {
+    b.GoogleAnalyticsObject = l;
+    b[l] || (b[l] =
+      function () {
+        (b[l].q = b[l].q || []).push(arguments)
+      });
+    b[l].l = +new Date;
+    e = o.createElement(i);
+    r = o.getElementsByTagName(i)[0];
+    e.src = 'https://www.google-analytics.com/analytics.js';
+    r.parentNode.insertBefore(e, r)
+  }(window, document, 'script', 'ga'));
+  ga('create', 'UA-XXXXX-X');
+  ga('send', 'pageview');</script><script src="scripts/vendor.js"></script><script src="scripts/plugins.js"></script><script src="scripts/main.js"></script></body></html>
