@@ -47,6 +47,7 @@
     }
   },
   "dependencies": {
-    "angular": "^1.5.7"
+    "angular": "^1.5.7",
+    "express": "^4.12.4"
   }
 }
